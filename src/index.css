@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-jarvis-blue: #00e5ff;
+    --color-jarvis-cyan: #38bdf8;
+    --color-jarvis-gold: #f59e0b;
+    --color-jarvis-red: #ef4444;
+    --color-jarvis-dark: #030712;
+  }
+
+  body {
+    background-color: #030712;
+    color: #f1f5f9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', -apple-system, sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-mono-tech {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Subtle Sci-fi Scanline background (lightened so text is 100% clear) */
+.scanline-overlay {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 229, 255, 0.015) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+}
+
+/* Crisp Glow utilities without heavy blurring */
+.glow-cyan {
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.6);
+}
+
+.glow-box-cyan {
+  box-shadow: 0 0 15px rgba(0, 229, 255, 0.25), inset 0 0 10px rgba(0, 229, 255, 0.1);
+}
+
+.glow-box-active {
+  box-shadow: 0 0 25px rgba(0, 229, 255, 0.4), inset 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+.glow-box-amber {
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+}
+
+/* Animations */
+@keyframes spinClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinCounterClockwise {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes arcPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 15px rgba(0, 229, 255, 0.7));
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+    filter: drop-shadow(0 0 30px rgba(0, 229, 255, 0.95));
+  }
+}
+
+.animate-spin-slow {
+  animation: spinClockwise 18s linear infinite;
+}
+
+.animate-spin-slow-reverse {
+  animation: spinCounterClockwise 14s linear infinite;
+}
+
+.animate-spin-medium {
+  animation: spinClockwise 8s linear infinite;
+}
+
+.animate-spin-medium-reverse {
+  animation: spinCounterClockwise 6s linear infinite;
+}
+
+.animate-arc-pulse {
+  animation: arcPulse 2.8s ease-in-out infinite;
+}
+
+.animate-arc-speaking {
+  animation: arcPulse 0.8s ease-in-out infinite;
+}
+
+/* Custom scrollbar for HUD log */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(3, 7, 18, 0.9);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.35);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.7);
+}

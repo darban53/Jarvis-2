@@ -1,0 +1,19 @@
+{
+  "short_name": "JARVIS",
+  "name": "J.A.R.V.I.S. - AI Holographic Assistant",
+  "description": "Stark Mark-85 AI personal assistant for Phone & PC with voice conversation, vision scanner, and live tools.",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#030712",
+  "theme_color": "#00e5ff",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "categories": ["utilities", "productivity", "entertainment"]
+}

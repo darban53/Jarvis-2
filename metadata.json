@@ -1,0 +1,9 @@
+{
+  "name": "J.A.R.V.I.S. - AI Holographic Assistant",
+  "description": "Full real-time Stark AI assistant for Phone & PC with voice conversation, vision scanner, live tools, and futuristic HUD.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

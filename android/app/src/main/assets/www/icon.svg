@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="arcGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="30%" stop-color="#00e5ff" stop-opacity="0.9" />
+      <stop offset="70%" stop-color="#0284c7" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#030712" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00e5ff" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="110" fill="#030712" />
+  <rect width="504" height="504" x="4" y="4" rx="106" fill="none" stroke="#00e5ff" stroke-width="4" stroke-opacity="0.5" />
+
+  <!-- Outer Glow -->
+  <circle cx="256" cy="256" r="220" fill="url(#arcGlow)" opacity="0.35" />
+
+  <!-- Segmented Outer Rings -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#00e5ff" stroke-width="6" stroke-dasharray="24 16" opacity="0.8" />
+  <circle cx="256" cy="256" r="160" fill="none" stroke="#38bdf8" stroke-width="4" stroke-dasharray="12 8" opacity="0.6" />
+  <circle cx="256" cy="256" r="130" fill="none" stroke="#00e5ff" stroke-width="8" stroke-dasharray="40 20" opacity="0.9" />
+
+  <!-- Inverted Arc Reactor Triangles -->
+  <polygon points="256,120 376,330 136,330" fill="none" stroke="#00e5ff" stroke-width="10" stroke-linejoin="round" />
+  <polygon points="256,310 336,170 176,170" fill="none" stroke="#38bdf8" stroke-width="6" stroke-linejoin="round" opacity="0.8" />
+
+  <!-- Center Core -->
+  <circle cx="256" cy="256" r="45" fill="#ffffff" />
+  <circle cx="256" cy="256" r="30" fill="#00e5ff" />
+  <circle cx="256" cy="256" r="15" fill="#ffffff" />
+
+  <!-- Text Badge -->
+  <text x="256" y="420" text-anchor="middle" font-family="monospace, sans-serif" font-size="28" font-weight="bold" fill="#00e5ff" letter-spacing="6">
+    J.A.R.V.I.S.
+  </text>
+</svg>
